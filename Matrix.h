@@ -88,7 +88,7 @@ Matrix<Scalar>::Matrix(unsigned int m, unsigned int n){
 
 template<typename Scalar>
 void Matrix<Scalar>::Free(){
-    std::cout<<"matrix ptr free"<<std::endl;
+    //std::cout<<"matrix ptr free"<<std::endl;
     for(int i=0; i<M; i++){
         free(ptr[i]);
     }

@@ -37,7 +37,7 @@ namespace function_I1_space{
 
 namespace function_I2_space{
     double func_exp(double theta, double s){
-        return exp(2.*c*c/gma/cos(theta)/cos(theta)*(s-TMAX));
+        return exp(2.*c*c/gma/cos(theta)/cos(theta)*(s-TMAX))/cos(theta); // In this way, either cos(theta) is 0 or infinity is not divergent
     }
     double func_angle(double theta, double s){
         return 2.*c*c/gma*tan(theta)/cos(theta)*(s-TMAX);
@@ -72,5 +72,28 @@ double COR_I2(double theta1, double theta2, double s1, double s2){
     return T1*T2*T3*T4*T5;
 }
 
+double COR_I12(double theta1, double theta2, double s1, double s2){
+    double T1_I1 = function_I1_space::func_exp(theta1, s1);
+    double T2_I1 = function_I1_space::func_sin_1(theta1, s1);
+    double T3_I1 = function_I1_space::func_sin_2(theta1);
+    double T_I1 = T1_I1*T2_I1*T3_I1;
+
+    double T1_I2 = function_I2_space::func_exp(theta2, s2);
+    double angle2 = function_I2_space::func_angle(theta2, s2);
+    double T2_I2 = cosh(angle2);
+    double T3_I2 = (1.-2./cos(theta2)/cos(theta2)) * tanh(angle2) - 2.*tan(theta2)/cos(theta2);
+    double T4_I2 = function_I2_space::func_sin(theta2);
+    double T_I2 = T1_I2*T2_I2*T3_I2*T4_I2;
+
+    double T = T_I1 * T_I2 * func_decay(s1, s2);
+    return T;
+}
+
+double COR_VEL2(double theta1, double theta2, double s1, double s2){
+    double term1 = COR_I1(theta1, theta2, s1, s2);
+    double term2 = COR_I2(theta1, theta2, s1, s2);
+    double term3 = COR_I12(theta1, theta2, s1, s2);
+    return term1 + term2 - 2.*term3;
+}
 
 

@@ -1,7 +1,8 @@
 #ifndef DEFINE
 #define DEFINE
+#include <iostream>
 
-#define PI 3.14159265359
+#define PI 3.1415926535
 
 extern double gma;
 extern double rho;
@@ -13,8 +14,10 @@ extern double lbda;
 
 
 extern double theta1_min;
+extern double theta1_threshold;
 extern double theta1_max;
 extern double theta2_min;
+extern double theta2_threshold;
 extern double theta2_max;
 extern double s1_min;
 extern double s1_max;

@@ -46,6 +46,16 @@ int main(){
     std::cout<<std::endl;
     Matrix<double> Q = (SMat*SMat);
     std::cout<< Q.sum()<<std::endl;
+
+    double data_col[9] = { 1.0, 4.0, 7.0, 2.0, 5.0, 8.0, 3.0, 6.0, 9.0 };
+    double data_row[9] = { 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0 };
+
+    const char write_file_row[] = "write_row.mat";
+    const char write_file_col[] = "write_col.mat";
+    const char write_vname_row[] = "test_row";
+    const char write_vname_col[] = "test_col";
+    WriteMatrixVariable(write_file_row, write_vname_row, data_row, 3, 3);
+    WriteMatrixVariable(write_file_col, write_vname_col, data_col, 3, 3, 'c');
 }
 
 /*

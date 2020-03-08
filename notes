@@ -1,0 +1,11 @@
+export PATH=/Applications/MATLAB_R2019b.app/sys/os:$PATH
+export PATH=/Applications/MATLAB_R2019b.app/bin:$PATH
+or "export PATH=$PATH:/usr/local/MATLAB/R2011b/bin"
+g++ -c engdemo.cpp -o engdemo.o -I/Applications/MATLAB_R2019b.app/extern/include/ -I/Applications/MATLAB_R2019b.app/simulink/include
+
+g++ engdemo.o -o engdemo -I/Applications/MATLAB_R2019b.app/extern/include/ -I/Applications/MATLAB_R2019b.app/simulink/include -L"/Applications/MATLAB_R2019b.app/bin/maci64" -lmx -lmex -lmat -L"/Applications/MATLAB_R2019b.app/extern/bin/maci64" -lMatlabDataArray -lMatlabEngine -leng -L"/Applications/MATLAB_R2019b.app/extern/bin/maci64" -lMatlabDataArray -lMatlabEngine
+
+g++ engdemo.cpp -o engdemo -I/Applications/MATLAB_R2019b.app/extern/include/ -I/Applications/MATLAB_R2019b.app/simulink/include -L/Applications/MATLAB_R2019b.app/bin/maci64 -lmx -lmex -lmat -L/Applications/MATLAB_R2019b.app/extern/bin/maci64 -lMatlabDataArray -lMatlabEngine -leng
+
+
+g++ engdemo.o -o engdemo -I/Applications/MATLAB_R2019b.app/extern/include/ -I/Applications/MATLAB_R2019b.app/simulink/include -L/Applications/MATLAB_R2019b.app/bin/maci64 -L/Applications/MATLAB_R2019b.app/extern/bin/maci64 -lmx -lmex -lmat -lMatlabDataArray -lMatlabEngine -leng

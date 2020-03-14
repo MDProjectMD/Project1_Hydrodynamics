@@ -1,0 +1,22 @@
+# delete the related IOManager header in run.cpp
+# no matlab library support
+
+CC = g++
+CFLAGS = -std=c++11
+
+objects_file = run.o IOManager.o Function.o Define.o
+
+run : $(objects_file)
+	$(CC) $(CFLAGS) $(objects_file) -o run
+
+run.o	:	run.cpp
+	$(CC) -c run.cpp -o run.o
+#IOManager.o	:	IOManager.h IOManager.cpp Matrix.h
+#	$(CC) -c IOManager.cpp -o IOManager.o $(INCLUDE)
+Function.o	:	Function.h	Function.cpp
+	$(CC) -c Function.cpp -o Function.o
+Define.o	:	Define.h Define.cpp
+	$(CC) -c Define.cpp -o Define.o
+
+clean :
+	rm $(objects_file) run

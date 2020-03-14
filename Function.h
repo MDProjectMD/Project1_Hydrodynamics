@@ -22,6 +22,18 @@ double COR_I2(double theta1, double theta2, double s1, double s2);
 
 double COR_I12(double theta1, double theta2, double s1, double s2);
 
-double COR_VEL2(double theta1, double theta2, double s1, double s2);
+double COR_I3_part1(double rho1, double rho2, double s1, double s2);
+
+double COR_I3_part2(double theta1, double theta2, double s1, double s2);
+
+double COR_I3_part3(double rho, double theta, double s1, double s2);
+
+double COR_I2I3_part1(double rho, double theta, double s1, double s2);
+
+double COR_I2I3_part2(double theta1, double theta2, double s1, double s2);
+
+double COR_I1I3_part1(double rho, double theta, double s1, double s2);
+
+double COR_I1I3_part2(double theta1, double theta2, double s1, double s2);
 
 #endif

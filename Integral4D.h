@@ -41,12 +41,12 @@ double Integral4D(Scalar(*func)(Scalar ,Scalar, Scalar, Scalar), double x1_min, 
         }
     }
     Matrix<Scalar> TMP = FMat2D_12*SMat12;
-    for(int i=0; i<FMat2D_12.getRowNum(); i++){
+    /*for(int i=0; i<FMat2D_12.getRowNum(); i++){
         for(int j=0; j<FMat2D_12.getColumnNum(); j++){
             std::cout << FMat2D_12[i][j] << " ";
         }
         std::cout<<std::endl;
-    }
+    }*/
     double tmp = TMP.sum()*DS12/9.;
     TMP.Free();
     return tmp;

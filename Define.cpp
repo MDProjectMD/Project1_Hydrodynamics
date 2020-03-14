@@ -39,6 +39,15 @@ double s1_max_I3 = TMAX;
 double s2_min_I3 = 0.;
 double s2_max_I3 = TMAX;
 
+double rho_min_I2I3 = 0.;
+double rho_max_I2I3 = 1./(sqrt(2.)/2.*z0) * 1.5;
+double theta_min_I2I3 = 0.;
+double theta_max_I2I3 = acos(2.*c/gma/K0);
+double s1_min_I2I3 = 0.;
+double s1_max_I2I3 = TMAX;
+double s2_min_I2I3 = 0.;
+double s2_max_I2I3 = TMAX;
+
 // COR_I2
 int N = 21;
 int N1 = 201;

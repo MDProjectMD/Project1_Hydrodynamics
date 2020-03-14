@@ -14,6 +14,10 @@ int main(){
     //double Q2 = Integral4D(&COR_I3_part2, theta_min_I3, theta_max_I3, theta_min_I3, theta_max_I3, s1_min_I3, s1_max_I3, s2_min_I3, s2_max_I3, N_theta, N_theta, N_time, N_time);
     //std::cout<<"N_rho: "<<N_rho<<" "<<"N_theta:    "<<N_theta<<"    N_time: "<<N_time<<"    N_time: "<<N_time<<std::endl;
     //double Q3 = Integral4D(&COR_I3_part3, rho_min_I3, rho_max_I3, theta_min_I3, theta_max_I3, s1_min_I3, s1_max_I3, s2_min_I3, s2_max_I3, N_rho, N_theta, N_time, N_time);
+    std::cout<<"N_rho: "<<N_rho<<" "<<"N_theta:    "<<N_theta<<"    N_time: "<<N_time<<"    N_time: "<<N_time<<std::endl;
+    double Q4 = Integral4D(&COR_I2I3_part1, rho_min_I2I3, rho_max_I2I3, theta_min_I2I3, theta_max_I2I3, s1_min_I2I3, s1_max_I2I3, s2_min_I2I3, s2_max_I2I3, N_rho, N_theta, N_time, N_time);
+
+    
     std::cout<< " part1:    " << Q1 << std::endl;
     //std::cout<< " part2:    " << Q2 << std::endl;
     //std::cout<< " part3:    " << Q3 << std::endl;

@@ -42,6 +42,15 @@ extern double s1_max_I3;
 extern double s2_min_I3;
 extern double s2_max_I3;
 
+extern double rho_min_I2I3;
+extern double rho_max_I2I3;
+extern double theta_min_I2I3;
+extern double theta_max_I2I3;
+extern double s1_min_I2I3;
+extern double s1_max_I2I3;
+extern double s2_min_I2I3;
+extern double s2_max_I2I3;
+
 // COR_I2
 extern int N1;
 extern int N2;
